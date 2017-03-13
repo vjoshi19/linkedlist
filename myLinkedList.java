@@ -25,6 +25,38 @@ public class myLinkedList {
 		}
 	}
 	
+	Node InsertNth(Node head, int data, int position){
+		Node temp = head;
+		int index = 0;
+		Node n = new Node(data);
+		
+		if(head == null){
+			head = n;
+			head.nextNode = null;
+			return head;
+		}
+		
+		while(index <= position){
+			temp = temp.nextNode;
+			++index;
+		}
+		n.nextNode = temp.nextNode;
+		temp.nextNode = n;
+		return head;
+	}
+	
+	public Node addAtStart(Node head, int data){
+		Node n = new Node(data);
+		if(head == null){
+			head = n;
+			head.nextNode = null;
+		}else{
+			n.nextNode = head;
+		    head = n;
+		}
+		return head;
+	}
+	
 	public void printList(){
 		Node current = head;
 		

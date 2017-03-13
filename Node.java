@@ -5,9 +5,13 @@ public class Node {
 	int data;
 	Node nextNode;
 	
+	public Node(){
+		
+	}
 	//Constructor this sets it to data and next node to null.
 	public Node(int data) {
 		this.data = data;
+		this.nextNode = null;
 	}
 	
 	public String toString(){

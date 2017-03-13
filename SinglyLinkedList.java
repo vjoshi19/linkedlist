@@ -13,7 +13,9 @@ public class SinglyLinkedList {
 		System.out.println("What do you want to do: ");
 		
 		System.out.println("Adding to a list");
-		
+
+		//System.out.print(list.addAtStart(head, 5).data);
+		list.printList();
 		list.add(10);
 		list.printList();
 		list.add(11);
